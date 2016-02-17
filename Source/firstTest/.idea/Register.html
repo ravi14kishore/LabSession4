@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script>
+        function onRegister(){
+            if((document.getElementById('fName').value != "") && (document.getElementById('lName').value != "") && (document.getElementById('uName').value != "") && (document.getElementById('pWord').value != "")) {
+                var firstname_local = document.getElementById('fName').value;
+                localStorage.setItem('FirstName', firstname_local);
+                var lastname_local = document.getElementById('lName').value;
+                localStorage.setItem('LastName', lastname_local);
+                var username_local = document.getElementById('uName').value;
+                localStorage.setItem('UserName', username_local);
+                var password_local = document.getElementById('pWord').value;
+                localStorage.setItem('Password', password_local);
+                location.href = "Login.html";
+            }
+            else
+                alert("Fill all the details");
+
+
+        }
+    </script>
+</head>
+<body background="http://www.pageresource.com/wallpapers/wallpaper/desktop-spring-theme-beach-ocean-themes-download.jpg">
+    <br><br><br><br><h1 style="text-align: center;font-size: 500%">Welcome to Registration</h1><br><br><br>
+    <form>
+        First Name &nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="firstName" id="fName"><br><br>
+        Last Name &nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="lastName" id="lName"><br><br>
+        Username &nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="username" id="uName"><br><br>
+        Password &nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="password" id="pWord"><br><br><br>
+        <input style="background-color: blue;color: white" type="button" value="Register" onclick="onRegister()">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+form{
+    text-align: center;
+    font-family: Calibri;
+    font-size: 200%;
+}
+input{
+    font-size: 100%;
+    font-family: Calibri;
+    border-radius: 6px;
+}
+.weatherModule {
+    background: #f2f2f2;
+    height: 150px;
+    width: 250px;
+    border: 1px dashed #ccc;
+    padding: 1em;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-10">
+    <title>Map and Weather service</title>
+</head>
+<body background="http://www.pageresource.com/wallpapers/wallpaper/desktop-spring-theme-beach-ocean-themes-download.jpg">
+    <br><br><br><br><h1 style="text-align: center;font-size: 500%">Welcome to the Map and Weather service</h1><br><br><br><br>
+    <form>
+        <b>Username</b> &nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="username" id="uName"><br><br><br>
+        <b>Password</b> &nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="password" id="pWord"><br><br><br>
+        <input style="background-color: blue;color: white" type="button" value="Login" onclick="login()">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Register.html"><input style="background-color: blue;color: white" type="button" value="Register"></a>
+    </form>
+</body>
+<script>
+    function login(){
+        var username_local = document.getElementById("uName");
+        var password_local = document.getElementById("pWord");
+        if((username_local.value==localStorage.getItem('UserName'))&&(password_local.value==localStorage.getItem('Password'))){
+            location.href = "Home.html";
+        }
+        else
+            alert("Invalid details");
+    }
+</script>
+</html>
